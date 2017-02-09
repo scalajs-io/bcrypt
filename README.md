@@ -69,10 +69,10 @@ Using `Bcrypt` synchronously
 
 #### Artifacts and Resolvers
 
-To add the Moment binding to your project, add the following to your build.sbt:  
+To add the `Bcrypt` binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "bcrypt" % "0.3.0.3"
+libraryDependencies += "io.scalajs.npm" %%% "bcrypt" % "1.0.2"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:

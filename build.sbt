@@ -1,12 +1,11 @@
 import org.scalajs.sbtplugin.ScalaJSPlugin
 import org.scalajs.sbtplugin.ScalaJSPlugin.autoImport._
 import sbt.Keys.{libraryDependencies, _}
-import sbt.Project.projectToRef
 import sbt._
 
 import scala.language.postfixOps
 
-val apiVersion = "0.3.0.3"
+val apiVersion = "1.0.2"
 val scalaJsIOVersion = "0.3.0.3"
 val scalaJsVersion = "2.12.1"
 

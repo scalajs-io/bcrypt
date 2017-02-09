@@ -1,6 +1,6 @@
 Bcrypt API for Scala.js
 ================================
-This is a Scala.js type-safe binding for [Bcrypt](https://www.npmjs.com/package/bcrypt)
+This is a Scala.js type-safe binding for [bcrypt](https://www.npmjs.com/package/bcrypt)
 
 A bcrypt library for NodeJS.
 
@@ -31,40 +31,48 @@ $ sbt test
 
 #### Examples
 
-First let's define some values
-
-```scala
-val saltRounds = 13
-val myPlaintextPassword = "b@c0n"
-```
-
 Using `Bcrypt` asynchronously via callbacks
 
 ```scala
-  Bcrypt.hash(myPlaintextPassword, saltRounds, (_, hash) => {
+import io.scalajs.npm.bcrypt._
+
+val saltRounds = 13
+val myPlaintextPassword = "b@c0n"
+
+Bcrypt.hash(myPlaintextPassword, saltRounds, (_, hash) => {
     Bcrypt.compare(myPlaintextPassword, hash, (_, isMatch) => {
       println(s"The password was a match: $isMatch") // The password was a match: true
     })
-  })
+})
 ```
 
 Using `Bcrypt` asynchronously via promises
 
 ```scala
-  for {
+import io.scalajs.npm.bcrypt._
+
+val saltRounds = 13
+val myPlaintextPassword = "b@c0n"
+
+for {
     hash <- Bcrypt.hash(myPlaintextPassword, saltRounds)
     isMatch <- Bcrypt.compare(myPlaintextPassword, hash)
-  } {
-    println(s"The password was a match: $isMatch") // The password was a match: true
-  }
+} {
+  println(s"The password was a match: $isMatch") // The password was a match: true
+}
 ```
 
 Using `Bcrypt` synchronously
 
 ```scala
-  val hash = Bcrypt.hashSync(myPlaintextPassword, saltRounds)
-  val isMatch = Bcrypt.compareSync(myPlaintextPassword, hash)
-  println(s"The password was a match: $isMatch") // The password was a match: true
+import io.scalajs.npm.bcrypt._
+
+val saltRounds = 13
+val myPlaintextPassword = "b@c0n"
+
+val hash = Bcrypt.hashSync(myPlaintextPassword, saltRounds)
+val isMatch = Bcrypt.compareSync(myPlaintextPassword, hash)
+println(s"The password was a match: $isMatch") // The password was a match: true
 ```
 
 #### Artifacts and Resolvers

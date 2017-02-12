@@ -1,6 +1,6 @@
 {
   "name": "bcrypt-scalajs",
-  "version": "0.3.1",
+  "version": "1.0.2",
   "private": true,
   "dependencies": {
     "bcrypt": "^1.0.2",

@@ -6,7 +6,7 @@ A bcrypt library for NodeJS.
 
 #### Build Dependencies
 
-* [ScalaJs.io v0.3.x](https://github.com/ldaniels528/scalajs.io)
+* [ScalaJs.io v0.3.x](https://github.com/scalajs-io/scalajs.io)
 * [SBT v0.13.13](http://www.scala-sbt.org/download.html)
 
 #### Build/publish the SDK locally

@@ -6,17 +6,17 @@ import sbt._
 import scala.language.postfixOps
 
 val apiVersion = "1.0.2"
-val scalaJsIOVersion = "0.3.0.3"
+val scalaJsIOVersion = "0.3.0.4-SNAPSHOT"
 val scalaJsVersion = "2.12.1"
 
-homepage := Some(url("https://github.com/scalajs.io/bcrypt"))
+homepage := Some(url("https://github.com/scalajs-io/bcrypt"))
 
 lazy val root = (project in file(".")).
   enablePlugins(ScalaJSPlugin).
   settings(
     name := "bcrypt",
     organization := "io.scalajs.npm",
-    description := "Bcrypt API bindings for Scala.js",
+    description := "A bcrypt library for NodeJS",
     version := apiVersion,
     scalaVersion := scalaJsVersion,
     scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-language:implicitConversions", "-Xlint"),

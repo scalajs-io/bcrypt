@@ -1,8 +1,11 @@
 Bcrypt API for Scala.js
 ================================
-This is a Scala.js type-safe binding for [bcrypt](https://www.npmjs.com/package/bcrypt)
+[bcrypt](https://www.npmjs.com/package/bcrypt) - A bcrypt library for NodeJS.
 
-A bcrypt library for NodeJS.
+#### Description
+
+`bcrypt` is a password hashing function designed by Niels Provos and David Mazières, 
+based on the Blowfish cipher, and presented at USENIX in 1999.
 
 #### Build Dependencies
 

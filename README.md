@@ -2,23 +2,23 @@ Bcrypt API for Scala.js
 ================================
 [bcrypt](https://www.npmjs.com/package/bcrypt) - A bcrypt library for NodeJS.
 
-#### Description
+### Description
 
 `bcrypt` is a password hashing function designed by Niels Provos and David Mazières, 
 based on the Blowfish cipher, and presented at USENIX in 1999.
 
-#### Build Dependencies
+### Build Dependencies
 
 * [ScalaJs.io v0.3.x](https://github.com/scalajs-io/scalajs.io)
 * [SBT v0.13.13](http://www.scala-sbt.org/download.html)
 
-#### Build/publish the SDK locally
+### Build/publish the SDK locally
 
 ```bash
  $ sbt clean publish-local
 ```
 
-#### Running the tests
+### Running the tests
 
 Before running the tests the first time, you must ensure the npm packages are installed:
 
@@ -32,7 +32,7 @@ Then you can run the tests:
 $ sbt test
 ```
 
-#### Examples
+### Examples
 
 Using `Bcrypt` asynchronously via callbacks
 
@@ -78,7 +78,7 @@ val isMatch = Bcrypt.compareSync(myPlaintextPassword, hash)
 println(s"The password was a match: $isMatch") // The password was a match: true
 ```
 
-#### Artifacts and Resolvers
+### Artifacts and Resolvers
 
 To add the `Bcrypt` binding to your project, add the following to your build.sbt:  
 

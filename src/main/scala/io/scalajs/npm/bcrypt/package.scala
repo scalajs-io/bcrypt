@@ -1,7 +1,7 @@
 package io.scalajs.npm
 
 import io.scalajs.nodejs.Error
-import io.scalajs.util.ScalaJsHelper._
+import io.scalajs.util.PromiseHelper._
 
 import scala.concurrent.Promise
 import scala.scalajs.js
@@ -31,7 +31,7 @@ package object bcrypt {
       */
     @inline
     def compareFuture(data: js.Any, encrypted: Hash): Promise[Boolean] = {
-      futureCallbackE1[BCryptError, Boolean](bcrypt.compare(data, encrypted, _))
+      promiseWithError1[BCryptError, Boolean](bcrypt.compare(data, encrypted, _))
     }
 
     /**
@@ -40,7 +40,7 @@ package object bcrypt {
       */
     @inline
     def genSaltFuture(rounds: Int = 10): Promise[Salt] = {
-      futureCallbackE1[BCryptError, Salt](bcrypt.genSalt(rounds, _))
+      promiseWithError1[BCryptError, Salt](bcrypt.genSalt(rounds, _))
     }
 
     /**
@@ -51,7 +51,7 @@ package object bcrypt {
       */
     @inline
     def hashFuture(data: js.Any, salt: Salt): Promise[Hash] = {
-      futureCallbackE1[BCryptError, Hash](bcrypt.hash(data, salt, _))
+      promiseWithError1[BCryptError, Hash](bcrypt.hash(data, salt, _))
     }
 
   }

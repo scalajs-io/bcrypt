@@ -9,7 +9,6 @@ based on the Blowfish cipher, and presented at USENIX in 1999.
 
 ### Build Dependencies
 
-* [ScalaJs.io v0.3.x](https://github.com/scalajs-io/scalajs.io)
 * [SBT v0.13.13](http://www.scala-sbt.org/download.html)
 
 ### Build/publish the SDK locally
@@ -83,7 +82,7 @@ println(s"The password was a match: $isMatch") // The password was a match: true
 To add the `Bcrypt` binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "bcrypt" % "1.0.2"
+libraryDependencies += "io.scalajs.npm" %%% "bcrypt" % "1.0.2-2"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:

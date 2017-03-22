@@ -1,6 +1,6 @@
 {
   "name": "bcrypt-sjs",
-  "version": "1.0.2-4",
+  "version": "0.4.0-pre1",
   "private": true,
   "dependencies": {
     "bcrypt": "^1.0.2",

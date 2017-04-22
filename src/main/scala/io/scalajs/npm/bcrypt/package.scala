@@ -3,7 +3,7 @@ package io.scalajs.npm
 import io.scalajs.nodejs.Error
 import io.scalajs.util.PromiseHelper._
 
-import scala.concurrent.Promise
+import scala.concurrent.{Future, Promise}
 import scala.scalajs.js
 
 /**
@@ -30,7 +30,7 @@ package object bcrypt {
       * @param encrypted the encrypted data to be compared to.
       */
     @inline
-    def compareFuture(data: js.Any, encrypted: Hash): Promise[Boolean] = {
+    def compareFuture(data: js.Any, encrypted: Hash): Future[Boolean] = {
       promiseWithError1[BCryptError, Boolean](bcrypt.compare(data, encrypted, _))
     }
 
@@ -39,7 +39,7 @@ package object bcrypt {
       * @param rounds the number of rounds to process the data for. (default - 10)
       */
     @inline
-    def genSaltFuture(rounds: Int = 10): Promise[Salt] = {
+    def genSaltFuture(rounds: Int = 10): Future[Salt] = {
       promiseWithError1[BCryptError, Salt](bcrypt.genSalt(rounds, _))
     }
 
@@ -50,7 +50,7 @@ package object bcrypt {
       * @example bcrypt.hash(data, salt, progress, cb)
       */
     @inline
-    def hashFuture(data: js.Any, salt: Salt): Promise[Hash] = {
+    def hashFuture(data: js.Any, salt: Salt): Future[Hash] = {
       promiseWithError1[BCryptError, Hash](bcrypt.hash(data, salt, _))
     }
 
